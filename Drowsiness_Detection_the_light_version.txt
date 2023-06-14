@@ -1,0 +1,19 @@
+In the script above, we first initialize dlib's face detector and facial landmarks predictor. 
+Then, we start capturing video from the webcam. For each frame, we convert it to grayscale, 
+then we detect faces in the image. For each face, we detect the facial landmarks.
+Using these landmarks, we calculate the Eye Aspect Ratio (EAR) for both eyes, and we take the average.
+If the average EAR is below a threshold, we increase a counter. If the counter exceeds a certain value,
+we consider that the person's eyes have been closed for a long time, and we show an alert on the screen.
+The process repeats until the user presses 'q' to stop the script.
+
+
+To run the code you provided, you need to have the following libraries installed:
+
+cv2 (OpenCV): Used for video capturing and image processing.
+dlib: Used for face detection and facial landmark detection.
+numpy: Used for numerical operations.
+scipy: Used for calculating the Euclidean distance between points.
+imutils: Used for convenience functions for working with OpenCV, including face utilities.
+
+
+$ pip install opencv-python dlib numpy scipy imutils
